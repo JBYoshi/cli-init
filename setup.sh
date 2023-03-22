@@ -83,7 +83,7 @@ main() {
                 git_clone_setup "$clone_url"
             fi
         fi
-    elif test $user_type  "3"
+    elif test $user_type = "3"
     then
         echo "Setting up with user scope."
         git_config_set --global
