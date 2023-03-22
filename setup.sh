@@ -58,14 +58,14 @@ main() {
         read -p "Select option: " user_type
     done
 
-    if test $user_type == "1"
+    if test $user_type = "1"
     then
         echo "Setting up with command scope."
         FILE="$HOME/jbgit"
         make_git_cmd > $FILE
         chmod u+x $FILE
         echo "Custom Git command saved to $FILE."
-    elif test $user_type == "2"
+    elif test $user_type = "2"
     then
         echo "Setting up with Git scope."
         if git rev-parse --show-toplevel >/dev/null 2>/dev/null
@@ -83,7 +83,7 @@ main() {
                 git_clone_setup "$clone_url"
             fi
         fi
-    elif test $user_type == "3"
+    elif test $user_type  "3"
     then
         echo "Setting up with user scope."
         git_config_set --global
