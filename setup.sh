@@ -2,6 +2,13 @@
 git_config_def () {
     echo "user.name=Jonathan Browne"
     echo "user.email=12983479+JBYoshi@users.noreply.github.com"
+    echo "push.default=current"
+    echo "merge.conflictstyle=diff3"
+    echo "alias.amend=commit --amend --no-edit"
+    echo "alias.uncommit=reset --mixed HEAD~1"
+    echo "alias.stash=-c commit.gpgsign=false stash"
+    echo "alias.graph=log --oneline --graph --all"
+    echo "color.ui=auto"
     echo "core.sshCommand=ssh jbrowne@linux.cs.utexas.edu ssh"
     echo "url.ssh://git@github.com.insteadOf=https://github.com"
 }
